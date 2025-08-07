@@ -9,36 +9,39 @@ import ChatScreen from './src/screens/ChatScreen';
 import Sidebar from './src/components/Sidebar';
 import { ChatProvider } from './src/context/ChatContext';
 import SplashScreen from './src/components/SplashScreen';
+import ErrorBoundary from './src/components/ErrorBoundary';
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <PaperProvider>
-        <ChatProvider>
-          <NavigationContainer>
-            <StatusBar style="auto" />
-            <Drawer.Navigator
-              drawerContent={(props) => <Sidebar {...props} />}
-              screenOptions={{
-                headerShown: false,
-                drawerStyle: {
-                  width: 280,
-                },
-              }}
-            >
-              <Drawer.Screen 
-                name="Chat" 
-                component={ChatScreen}
-                options={{
+    <ErrorBoundary>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <PaperProvider>
+          <ChatProvider>
+            <NavigationContainer>
+              <StatusBar style="auto" />
+              <Drawer.Navigator
+                drawerContent={(props) => <Sidebar {...props} />}
+                screenOptions={{
                   headerShown: false,
+                  drawerStyle: {
+                    width: 280,
+                  },
                 }}
-              />
-            </Drawer.Navigator>
-          </NavigationContainer>
-        </ChatProvider>
-      </PaperProvider>
-    </GestureHandlerRootView>
+              >
+                <Drawer.Screen 
+                  name="Chat" 
+                  component={ChatScreen}
+                  options={{
+                    headerShown: false,
+                  }}
+                />
+              </Drawer.Navigator>
+            </NavigationContainer>
+          </ChatProvider>
+        </PaperProvider>
+      </GestureHandlerRootView>
+    </ErrorBoundary>
   );
 } 
