@@ -1,0 +1,60 @@
+{
+  "chats": [
+    {
+      "id": "1",
+      "title": "General Questions",
+      "timestamp": "2024-01-15T10:30:00.000Z",
+      "messages": [
+        {
+          "id": 1,
+          "text": "Hello! I'm your AI assistant. How can I help you today?",
+          "sender": "bot",
+          "timestamp": "2024-01-15T10:30:00.000Z"
+        },
+        {
+          "id": 2,
+          "text": "What can you help me with?",
+          "sender": "user",
+          "timestamp": "2024-01-15T10:31:00.000Z"
+        },
+        {
+          "id": 3,
+          "text": "I'm here to help! Let me provide some insights on that...",
+          "sender": "bot",
+          "timestamp": "2024-01-15T10:31:30.000Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Technical Discussion",
+      "timestamp": "2024-01-14T15:20:00.000Z",
+      "messages": [
+        {
+          "id": 1,
+          "text": "Hello! I'm your AI assistant. How can I help you today?",
+          "sender": "bot",
+          "timestamp": "2024-01-14T15:20:00.000Z"
+        },
+        {
+          "id": 2,
+          "text": "Can you explain React Native?",
+          "sender": "user",
+          "timestamp": "2024-01-14T15:21:00.000Z"
+        },
+        {
+          "id": 3,
+          "text": "That's an interesting question! Let me think about that...",
+          "sender": "bot",
+          "timestamp": "2024-01-14T15:21:30.000Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "New Chat",
+      "timestamp": "2024-01-16T09:00:00.000Z",
+      "messages": []
+    }
+  ]
+} 
